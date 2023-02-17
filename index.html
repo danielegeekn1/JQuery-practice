@@ -14,11 +14,13 @@
     <style></style>
   </head>
   <body>
-    <p>Demon slayer is one of the <strong>coolest </strong> anime ever</p>
+    <h3>Demon slayer is one of the <strong>coolest </strong> anime ever</h3>
     <input type="text" data-val="23" />
     <a href="https://google.com">go to google</a>
+    <p>My favourite anime</p>
     <button id="start">start</button>
     <button id="start2">start second example</button>
+    <button id="start3">changing text</button>
     <script>
       $(document).ready(function () {
         $("#start").click(function () {
@@ -26,6 +28,9 @@
         });
         $("#start2").click(function () {
           console.log($("input").attr("data-val"));
+        });
+        $("#start3").click(function () {
+          console.log($("p").text("my favourite books"));
         });
       });
     </script>
