@@ -11,22 +11,37 @@
       crossorigin="anonymous"
     ></script>
     <title>Document</title>
-    <style></style>
+    <style>
+      div {
+        background-color: salmon;
+        height: 200px;
+        width: 200px;
+      }
+    </style>
   </head>
   <body>
-    <h4>Manga is the best art ever</h4>
+    <h4>Manga is the best</h4>
     <button id="addTxt">add txt to first title</button>
-    <p style="background-color: cadetblue">Rouruni Kenshin is my favourite</p>
+    <br />
+    <h3 style="background-color: cadetblue">Rouruni Kenshin is my favourite</h3>
     <button id="add">Add some text</button>
+    <br />
+    <div>
+      <p class="first">first paragraph in the div</p>
+      <p>second paragraph</p>
+      <p>third paragraph</p>
+    </div>
+    <button id="delete">Delete div</button>
     <script>
       $(document).ready(function () {
-        $("#add").click(function () {
-          $("p").append("<strong> anime ever </strong>");
-        });
         $("#addTxt").click(function () {
-          $("h4").after(
-            "<strong> On my top three surely there's demon slayer </strong>"
-          );
+          $("h4").append("<strong> art ever </strong>");
+        });
+        $("#add").click(function () {
+          $("h3").append("<strong> anime ever </strong>");
+        });
+        $("#delete").click(function () {
+          $("div").remove();
         });
       });
     </script>
