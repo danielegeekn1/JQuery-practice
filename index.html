@@ -26,17 +26,19 @@
     <input type="text" />
     <script>
       $(document).ready(function () {
-        $("input").focus(function () {
-          console.log("I clicked in the field");
-          $(this).css("background-color", "red");
-        });
-        $("input").blur(function () {
-          console.log("I came out of the field");
-          $(this).css("background-color", "yellow");
-        });
-        $("input").change(function () {
-          console.log("I changed the field text");
-          $(this).css("background-color", "blue");
+        $("input").on({
+          focus: function () {
+            console.log("I clicked in the field");
+            $(this).css("background-color", "red");
+          },
+          blur: function () {
+            console.log("I came out of the field");
+            $(this).css("background-color", "yellow");
+          },
+          change: function () {
+            console.log("I changed the field text");
+            $(this).css("background-color", "blue");
+          },
         });
       });
     </script>
