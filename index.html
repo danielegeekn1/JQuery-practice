@@ -11,48 +11,29 @@
       crossorigin="anonymous"
     ></script>
     <title>Document</title>
+    <style>
+      .square {
+        width: 150px;
+        height: 150px;
+        background-color: black;
+        margin: 30px;
+      }
+    </style>
   </head>
   <body>
-    <p>Hi I am a paragraph</p>
-    <p id="super">paragraph tag with id of super</p>
-    <p class="super">paragraph tag with class of super</p>
-    <h4>I am an H4 tag element</h4>
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-    </ul>
-    <p data-val="hello">paragraph with custom attribute</p>
-    <h2 data-val="hello">h2 tag element with custom attribute</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>0</th>
-          <th>Luca</th>
-        </tr>
-        <tr>
-          <th>1</th>
-          <th>Daniele</th>
-        </tr>
-        <tr>
-          <th>2</th>
-          <th>Giulia</th>
-        </tr>
-        <tr>
-          <th>3</th>
-          <th>Simone</th>
-        </tr>
-      </tbody>
-    </table>
+    <button>Click me</button>
+    <div class="square">the square tag</div>
+    <input type="text" />
     <script>
       $(document).ready(function () {
-        $("tbody tr:even").hide();
+        $("div").mouseenter(function () {
+          console.log("I entered the div");
+          $(this).css("background-color", "red");
+        });
+        $("div").mouseleave(function () {
+          console.log("I came out of the div");
+          $(this).css("background-color", "yellow");
+        });
       });
     </script>
   </body>
