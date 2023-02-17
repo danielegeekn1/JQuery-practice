@@ -11,34 +11,22 @@
       crossorigin="anonymous"
     ></script>
     <title>Document</title>
-    <style>
-      .square {
-        width: 150px;
-        height: 150px;
-        background-color: black;
-        margin: 30px;
-      }
-    </style>
   </head>
   <body>
-    <button>Click me</button>
-    <div class="square">the square tag</div>
-    <input type="text" />
+    <p>I am a paragraph</p>
+    <button id="show">show</button>
+    <button id="hide">hide</button>
+    <button id="toggle">toggle</button>
     <script>
       $(document).ready(function () {
-        $("input").on({
-          focus: function () {
-            console.log("I clicked in the field");
-            $(this).css("background-color", "red");
-          },
-          blur: function () {
-            console.log("I came out of the field");
-            $(this).css("background-color", "yellow");
-          },
-          change: function () {
-            console.log("I changed the field text");
-            $(this).css("background-color", "blue");
-          },
+        $("#show").click(function () {
+          $("p").show();
+        });
+        $("#hide").click(function () {
+          $("p").hide();
+        });
+        $("#toggle").click(function () {
+          $("p").toggle();
         });
       });
     </script>
