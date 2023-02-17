@@ -11,22 +11,26 @@
       crossorigin="anonymous"
     ></script>
     <title>Document</title>
+    <style>
+      h4,
+      p {
+        background-color: cadetblue;
+        padding: 10px;
+        margin: 0;
+      }
+      p {
+        display: none;
+      }
+    </style>
   </head>
   <body>
+    <h4>The best title ever</h4>
     <p>I am a paragraph</p>
-    <button id="show">show</button>
-    <button id="hide">hide</button>
-    <button id="toggle">toggle</button>
+
     <script>
       $(document).ready(function () {
-        $("#show").click(function () {
-          $("p").show();
-        });
-        $("#hide").click(function () {
-          $("p").hide();
-        });
-        $("#toggle").click(function () {
-          $("p").toggle();
+        $("h4").click(function () {
+          $("p").toggle(1000);
         });
       });
     </script>
