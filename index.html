@@ -25,23 +25,11 @@
   </head>
   <body>
     <h4>The best title ever</h4>
-    <!-- <pa>I am a paragraph</p> -->
-    <button id="show">show</button>
-    <button id="hide">hide</button>
-    <button id="toggle">toggle</button>
+    <p>best paragraph ever</p>
     <script>
       $(document).ready(function () {
-        // $("h4").click(function () {
-        //   $("p").toggle(1000);
-        // });
-        $("#show").click(function () {
-          $("h4").fadeIn(1000);
-        });
-        $("#hide").click(function () {
-          $("h4").fadeOut(1000);
-        });
-        $("#toggle").click(function () {
-          $("h4").fadeToggle(1000);
+        $("h4").click(function () {
+          $("p").slideToggle(1000);
         });
       });
     </script>
