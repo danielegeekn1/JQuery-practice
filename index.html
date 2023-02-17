@@ -27,6 +27,19 @@
     <button id="stop">stop</button>
     <script>
       $(document).ready(() => {
+        $("#start").click(function () {
+          $(".square").animate(
+            {
+              left: "250px",
+              width: "150px",
+              height: "150px",
+            },
+            3000,
+            () => {
+              alert("hello from callback function");
+            }
+          );
+        });
         // $("#start").click(() => {
         //   $(".square").animate(
         //     {
@@ -56,33 +69,34 @@
         // $("#stop").click(() => {
         //   $(".square").stop(false, true);
         // });
-        $("#start").click(function () {
-          $(".square")
-            .animate(
-              {
-                left: "250px",
-                width: "150px",
-                height: "150px",
-              },
-              3000
-            )
-            .animate(
-              {
-                left: "500px",
-                width: "300px",
-                height: "300px",
-              },
-              5000
-            )
-            .animate(
-              {
-                left: "0",
-                width: "300px",
-                height: "300px",
-              },
-              3000
-            );
-        });
+        // $("#start").click(function () {
+        //   $(".square")
+        //     .animate(
+        //       {
+        //         left: "250px",
+        //         width: "150px",
+        //         height: "150px",
+        //       },
+        //       3000
+        //     )
+        //     .animate(
+        //       {
+        //         left: "500px",
+        //         width: "300px",
+        //         height: "300px",
+        //       },
+        //       5000
+        //     )
+        //     .animate(
+        //       {
+        //         left: "0",
+        //         width: "300px",
+        //         height: "300px",
+        //       },
+        //       3000
+        //     )
+        //     .fadeOut(1000);
+        // });
       });
     </script>
   </body>
