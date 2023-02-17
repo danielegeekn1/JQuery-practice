@@ -12,36 +12,26 @@
     ></script>
     <title>Document</title>
     <style>
-      div {
-        background-color: salmon;
-        height: 200px;
-        width: 200px;
+      .error {
+        color: red;
+      }
+      .col {
+        color: blue;
       }
     </style>
   </head>
+  <p class="error">Viking story began like this</p>
+  <h5 class="col">color class</h5>
+  <button id="click">Click me</button>
+  <button id="showCss">Show css property</button>
   <body>
-    <h4>Manga is the best</h4>
-    <button id="addTxt">add txt to first title</button>
-    <br />
-    <h3 style="background-color: cadetblue">Rouruni Kenshin is my favourite</h3>
-    <button id="add">Add some text</button>
-    <br />
-    <div>
-      <p class="first">first paragraph in the div</p>
-      <p>second paragraph</p>
-      <p>third paragraph</p>
-    </div>
-    <button id="delete">Delete div</button>
     <script>
       $(document).ready(function () {
-        $("#addTxt").click(function () {
-          $("h4").append("<strong> art ever </strong>");
+        $("#click").click(function () {
+          $("p").toggleClass("error");
         });
-        $("#add").click(function () {
-          $("h3").append("<strong> anime ever </strong>");
-        });
-        $("#delete").click(function () {
-          $("div").remove();
+        $("#showCss").click(function () {
+          console.log($("h5").css("color"));
         });
       });
     </script>
