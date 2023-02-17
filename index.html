@@ -26,13 +26,17 @@
     <input type="text" />
     <script>
       $(document).ready(function () {
-        $("div").mouseenter(function () {
-          console.log("I entered the div");
+        $("input").focus(function () {
+          console.log("I clicked in the field");
           $(this).css("background-color", "red");
         });
-        $("div").mouseleave(function () {
-          console.log("I came out of the div");
+        $("input").blur(function () {
+          console.log("I came out of the field");
           $(this).css("background-color", "yellow");
+        });
+        $("input").change(function () {
+          console.log("I changed the field text");
+          $(this).css("background-color", "blue");
         });
       });
     </script>
