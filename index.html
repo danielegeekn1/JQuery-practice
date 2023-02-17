@@ -21,6 +21,7 @@
     <button id="start">start</button>
     <button id="start2">start second example</button>
     <button id="start3">changing text</button>
+    <button id="changeAttribute">change input attribute</button>
     <script>
       $(document).ready(function () {
         $("#start").click(function () {
@@ -31,6 +32,9 @@
         });
         $("#start3").click(function () {
           console.log($("p").text("my favourite books"));
+        });
+        $("#changeAttribute").click(function () {
+          console.log($("a").attr("href", "https://facebook.com"));
         });
       });
     </script>
