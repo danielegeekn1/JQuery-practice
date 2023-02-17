@@ -14,27 +14,19 @@
     <style></style>
   </head>
   <body>
-    <h3>Demon slayer is one of the <strong>coolest </strong> anime ever</h3>
-    <input type="text" data-val="23" />
-    <a href="https://google.com">go to google</a>
-    <p>My favourite anime</p>
-    <button id="start">start</button>
-    <button id="start2">start second example</button>
-    <button id="start3">changing text</button>
-    <button id="changeAttribute">change input attribute</button>
+    <h4>Manga is the best art ever</h4>
+    <button id="addTxt">add txt to first title</button>
+    <p style="background-color: cadetblue">Rouruni Kenshin is my favourite</p>
+    <button id="add">Add some text</button>
     <script>
       $(document).ready(function () {
-        $("#start").click(function () {
-          console.log($("input").val());
+        $("#add").click(function () {
+          $("p").append("<strong> anime ever </strong>");
         });
-        $("#start2").click(function () {
-          console.log($("input").attr("data-val"));
-        });
-        $("#start3").click(function () {
-          console.log($("p").text("my favourite books"));
-        });
-        $("#changeAttribute").click(function () {
-          console.log($("a").attr("href", "https://facebook.com"));
+        $("#addTxt").click(function () {
+          $("h4").after(
+            "<strong> On my top three surely there's demon slayer </strong>"
+          );
         });
       });
     </script>
