@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--jquery script added in the project-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Hi I am a paragraph</p>
+    <p id="super">paragraph tag with id of super</p>
+    <p class="super">paragraph tag with class of super</p>
+    <h4>I am an H4 tag element</h4>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <p data-val="hello">paragraph with custom attribute</p>
+    <h2 data-val="hello">h2 tag element with custom attribute</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>0</th>
+          <th>Luca</th>
+        </tr>
+        <tr>
+          <th>1</th>
+          <th>Daniele</th>
+        </tr>
+        <tr>
+          <th>2</th>
+          <th>Giulia</th>
+        </tr>
+        <tr>
+          <th>3</th>
+          <th>Simone</th>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      $(document).ready(function () {
+        $("tbody tr:even").hide();
+      });
+    </script>
+  </body>
+</html>
