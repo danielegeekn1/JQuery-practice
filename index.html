@@ -17,8 +17,11 @@
     <div>
       <ul>
         <li>
-          <p>Good morning</p>
+          <p class="first">Good morning</p>
           <p>Good evening</p>
+          <p>Greetings</p>
+          <h6>Another greeting</h6>
+          <p>what's up boy</p>
         </li>
         <li>
           <p>Good afternoon</p>
@@ -40,11 +43,21 @@
         //     .parentsUntil("ul")
         //     .css({ color: "red", border: "2px solid red" });
         // });
+        // $("#click").click(function () {
+        //   $("div").children().css({ color: "red", border: "2px solid red" });
+        // });
+        // $("#domTrav").click(function () {
+        //   $("div").find("p").css({ color: "red", border: "2px solid red" });
+        // });
         $("#click").click(function () {
-          $("div").children().css({ color: "red", border: "2px solid red" });
+          $("p.first")
+            .siblings()
+            .css({ color: "red", border: "2px solid red" });
         });
         $("#domTrav").click(function () {
-          $("div").find("p").css({ color: "red", border: "2px solid red" });
+          $("p.first")
+            .nextUntil("h6")
+            .css({ color: "red", border: "2px solid red" });
         });
       });
     </script>
