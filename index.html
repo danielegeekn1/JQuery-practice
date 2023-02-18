@@ -23,9 +23,23 @@
         $("#click").click(function () {
           $("p").load("test.txt");
         });
+        // $("#addJson").click(function () {
+        //   $.getJSON("test.json", function (data) {
+        //     console.log(data);
+        //   });
+        // });
         $("#addJson").click(function () {
-          $.getJSON("test.json", function (data) {
-            console.log(data);
+          $.ajax({
+            url: "test.json",
+            dataType: "json",
+            type: "get",
+            // data: $(this).serialize(), // if we're requesting data from a form
+            success: function (response) {
+              console.log(response);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+              console.log(textStatus, errorThrown);
+            },
           });
         });
       });
