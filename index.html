@@ -11,42 +11,25 @@
       crossorigin="anonymous"
     ></script>
     <title>Document</title>
-    <style>
-      .error {
-        color: red;
-      }
-      .col {
-        color: blue;
-      }
-      div {
-        height: 150px;
-        width: 150px;
-        background-color: salmon;
-      }
-    </style>
+    <style></style>
   </head>
-  <p class="error">Viking story began like this</p>
-  <h5 class="col">color class</h5>
-  <button id="click">Click me</button>
-  <button id="showCss">Show css property</button>
-  <h4>title with css property</h4>
-  <button id="setCss">Set a css property</button>
-  <button id="setDivCss">Set css property for the div</button>
-  <div></div>
   <body>
+    <div>
+      <ul>
+        <li>
+          <p>Good morning</p>
+          <p>Good evening</p>
+        </li>
+        <li>
+          <p>Good afternoon</p>
+        </li>
+      </ul>
+    </div>
+    <button id="click">Click me</button>
     <script>
       $(document).ready(function () {
         $("#click").click(function () {
-          $("p").toggleClass("error");
-        });
-        $("#showCss").click(function () {
-          console.log($("h5").css("color"));
-        });
-        $("#setCss").click(function () {
-          $("h4").css("color", "blue");
-        });
-        $("#setDivCss").click(function () {
-          $("div").width(300).height(300);
+          $("p").parent().css({ color: "red", border: "2px solid red" });
         });
       });
     </script>
