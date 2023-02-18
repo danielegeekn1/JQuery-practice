@@ -18,6 +18,11 @@
       .col {
         color: blue;
       }
+      div {
+        height: 150px;
+        width: 150px;
+        background-color: salmon;
+      }
     </style>
   </head>
   <p class="error">Viking story began like this</p>
@@ -26,7 +31,8 @@
   <button id="showCss">Show css property</button>
   <h4>title with css property</h4>
   <button id="setCss">Set a css property</button>
-
+  <button id="setDivCss">Set css property for the div</button>
+  <div></div>
   <body>
     <script>
       $(document).ready(function () {
@@ -38,6 +44,9 @@
         });
         $("#setCss").click(function () {
           $("h4").css("color", "blue");
+        });
+        $("#setDivCss").click(function () {
+          $("div").width(300).height(300);
         });
       });
     </script>
