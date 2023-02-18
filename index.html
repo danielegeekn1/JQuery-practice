@@ -14,12 +14,19 @@
     <style></style>
   </head>
   <body>
+    <h4></h4>
     <p></p>
-    <button id="click">click me</button>
+    <button id="click">Adding some text content</button>
+    <button id="addJson">Add some Json content</button>
     <script>
       $(document).ready(function () {
         $("#click").click(function () {
           $("p").load("test.txt");
+        });
+        $("#addJson").click(function () {
+          $.getJSON("test.json", function (data) {
+            console.log(data);
+          });
         });
       });
     </script>
