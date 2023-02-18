@@ -29,16 +29,22 @@
     <button id="domTrav">Traversing the DOM</button>
     <script>
       $(document).ready(function () {
+        // $("#click").click(function () {
+        //   $("p")
+        //     .parent()
+        //     .parent()
+        //     .css({ color: "red", border: "2px solid red" });
+        // });
+        // $("#domTrav").click(function () {
+        //   $("p")
+        //     .parentsUntil("ul")
+        //     .css({ color: "red", border: "2px solid red" });
+        // });
         $("#click").click(function () {
-          $("p")
-            .parent()
-            .parent()
-            .css({ color: "red", border: "2px solid red" });
+          $("div").children().css({ color: "red", border: "2px solid red" });
         });
         $("#domTrav").click(function () {
-          $("p")
-            .parentsUntil("ul")
-            .css({ color: "red", border: "2px solid red" });
+          $("div").find("p").css({ color: "red", border: "2px solid red" });
         });
       });
     </script>
