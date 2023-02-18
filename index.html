@@ -24,6 +24,9 @@
   <h5 class="col">color class</h5>
   <button id="click">Click me</button>
   <button id="showCss">Show css property</button>
+  <h4>title with css property</h4>
+  <button id="setCss">Set a css property</button>
+
   <body>
     <script>
       $(document).ready(function () {
@@ -32,6 +35,9 @@
         });
         $("#showCss").click(function () {
           console.log($("h5").css("color"));
+        });
+        $("#setCss").click(function () {
+          $("h4").css("color", "blue");
         });
       });
     </script>
