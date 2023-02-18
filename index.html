@@ -26,10 +26,19 @@
       </ul>
     </div>
     <button id="click">Click me</button>
+    <button id="domTrav">Traversing the DOM</button>
     <script>
       $(document).ready(function () {
         $("#click").click(function () {
-          $("p").parent().css({ color: "red", border: "2px solid red" });
+          $("p")
+            .parent()
+            .parent()
+            .css({ color: "red", border: "2px solid red" });
+        });
+        $("#domTrav").click(function () {
+          $("p")
+            .parentsUntil("ul")
+            .css({ color: "red", border: "2px solid red" });
         });
       });
     </script>
